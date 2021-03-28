@@ -10,7 +10,6 @@ class PubblicController extends Controller
 
     public function index()
     {
-
         $brand = Brand::all();
 
         return view('brands.index', compact('brand'));
@@ -20,6 +19,5 @@ class PubblicController extends Controller
     {
         return view('brands.show', compact('brand'));
     }
-
 
 }

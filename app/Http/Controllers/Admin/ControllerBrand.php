@@ -15,7 +15,7 @@ class ControllerBrand extends Controller
      */
     public function index()
     {
-
+        return redirect()->route('public.brand.show');
     }
 
     /**
@@ -56,7 +56,7 @@ class ControllerBrand extends Controller
      */
     public function show(Brand $brand)
     {
-
+        return redirect()->route('public.brand.show', $brand);
     }
 
     /**
@@ -88,8 +88,11 @@ class ControllerBrand extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Brand $brand)
     {
-        //
+        $brand->delete();
+
+        return redirect()->route('public.brand.index');
+
     }
 }

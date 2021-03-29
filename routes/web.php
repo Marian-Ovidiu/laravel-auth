@@ -25,7 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('brand', 'PubblicController@index')->name('public.brand.index'); // index
-Route::get('brand/show/{brand}', 'PubblicController@show')->name('public.brand.show');
+Route::get('brand/show/{brand}', 'PubblicController@show')->name('public.brand.show');  //show
 
 // Route::resource('auto', AutoController::class)->middleware('auth');
 Route::prefix('admin')

@@ -43,7 +43,7 @@ class ControllerBrand extends Controller
 
         $brandStored = Brand::orderBy('id', 'desc')->first();
 
-        return redirect()->route('public.show', $brandStored);
+        return redirect()->route('public.brand.show', $brandStored);
 
 
     }
